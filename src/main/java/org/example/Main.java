@@ -80,10 +80,11 @@ public class Main {
     }
 
     private static void outputData(Writer writer, List<Human> humans, List<Division> divisions) throws IOException {
+        final var collector = Collectors.joining(",\n", "", "\n");
         writer.append("Divisions:\n");
-        writer.append(divisions.stream().map(Division::toString).collect(Collectors.joining(",\n")));
+        writer.append(divisions.stream().map(Division::toString).collect(collector));
         writer.append("\nHumans:\n");
-        writer.append(humans.stream().map(Human::toString).collect(Collectors.joining(",\n")));
+        writer.append(humans.stream().map(Human::toString).collect(collector));
     }
 
     private static final CSVParser CSV_PARSER = new CSVParserBuilder().withSeparator(';').build();
