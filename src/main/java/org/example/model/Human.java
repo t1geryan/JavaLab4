@@ -80,4 +80,16 @@ public class Human {
     public int hashCode() {
         return Objects.hash(id, name, gender, birthDate, salary, division);
     }
+
+    @Override
+    public String toString() {
+        return "Human(" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", gender=" + gender +
+                ", birthDate=" + birthDate +
+                ", salary=" + salary +
+                ", division=" + division +
+                ')';
+    }
 }

@@ -38,4 +38,12 @@ public class Division {
     public int hashCode() {
         return Objects.hash(id, name);
     }
+
+    @Override
+    public String toString() {
+        return "Division(" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ')';
+    }
 }
